@@ -1,5 +1,7 @@
 package application;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -11,9 +13,10 @@ public class Program {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-
         Seller sl = new Seller(14,"Guilherme","guilherme@gmail.com",
                 sdf.parse("18/12/2004"), 2000.0, new Department(14,"Boxes"));
+
+        SellerDao sd = DaoFactory.createsellerDao();
 
         System.out.println(sl.toString());
 
