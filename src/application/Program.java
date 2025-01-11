@@ -11,14 +11,11 @@ import java.text.SimpleDateFormat;
 public class Program {
     public static void main(String[] args) throws ParseException {
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SellerDao sellerDao = DaoFactory.createsellerDao();
+        
+        Seller seller = sellerDao.findById(3);
 
-        Seller sl = new Seller(14,"Guilherme","guilherme@gmail.com",
-                sdf.parse("18/12/2004"), 2000.0, new Department(14,"Boxes"));
-
-        SellerDao sd = DaoFactory.createsellerDao();
-
-        System.out.println(sl.toString());
+        System.out.println(seller);
 
 
     }

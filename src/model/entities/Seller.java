@@ -7,6 +7,8 @@ import java.util.Objects;
 
 public class Seller implements Serializable {
 
+    //Implementando a Classe Seller com o Serializable - Classe padrão
+
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     private Integer id;

@@ -5,6 +5,9 @@ import java.util.Objects;
 
 public class Department implements Serializable {
 
+    //Implementando a Classe Department com o Serializable - Para ser utilizado para arquivos
+    // ou redes etc...
+
     private Integer id;
     private String name;
 
