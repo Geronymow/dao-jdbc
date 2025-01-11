@@ -5,12 +5,12 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-import java.text.ParseException;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
 public class Program {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws SQLException {
 
         SellerDao sellerDao = DaoFactory.createsellerDao();
 
@@ -39,6 +39,15 @@ public class Program {
                 null,"Greg","greg@gmail.com",new Date(),4000.0, dep);
         sellerDao.insert(newSeller);
         System.out.println("INSERTED! NEW ID: " + newSeller.getId());
+        System.out.println();
+
+        System.out.println("=== TEST 5: Seller update ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Bob Brown Caine");
+        sellerDao.update(seller);
+        System.out.println("Update Completed");
+
+
 
     }
 }
