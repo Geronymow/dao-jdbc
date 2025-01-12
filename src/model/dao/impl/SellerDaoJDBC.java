@@ -91,7 +91,6 @@ public class SellerDaoJDBC extends Factory implements SellerDao {
         finally {
             DB.closeStatement(st);
         }
-
     }
 
     @Override
@@ -150,7 +149,6 @@ public class SellerDaoJDBC extends Factory implements SellerDao {
             DB.closeStatement(st);
             DB.closeResultSet(rs);
         }
-
     }
 
     @Override
